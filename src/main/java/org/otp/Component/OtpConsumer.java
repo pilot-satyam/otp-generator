@@ -33,7 +33,7 @@ public class OtpConsumer {
     }
 
     private void simulateSmsSend(OtpMessage message) {
-        if(new Random().nextInt(10) < 9){
+        if(new Random().nextInt(10) < 5){
             throw new RuntimeException("SMS failed!! ");
         }
         System.out.println("SMS sent to ..." + message.getPhone() + " With otp :  " + message.getOtp());
